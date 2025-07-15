@@ -7,7 +7,8 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="vertical"
-    android:gravity="center_horizontal">
+    android:gravity="center_horizontal"
+    android:background="#465C3C">
 
     <TextView
         android:id="@+id/textView2"
@@ -101,7 +102,9 @@
         android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:text="CALCULAR"
-        android:layout_marginTop="50dp"/>
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#2D332A"
+        android:textColor="@color/white"/>
     <!-- Fim do Botão Calcular -->
 
     <!-- Layout Resultado -->
@@ -144,7 +147,9 @@
             android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:text="LIMPAR"
-            android:layout_marginTop="50dp"/>
+            android:layout_marginTop="50dp"
+            android:backgroundTint="#2D332A"
+            android:textColor="@color/white"/>
         <!-- Fim do Botão Calcular -->
     </LinearLayout>
     <!-- Fim do Layout Resultado -->
