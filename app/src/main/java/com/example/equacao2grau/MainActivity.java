@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
                 // exibe uma mensagem de alerta usando AlertDialog
                 new AlertDialog.Builder(this)
                         .setTitle("Aviso")
-                        .setMessage("Foi identificado que há campo(s) vazio(s), esse(s) vai(ão) ser(ão) preenchido(s) por 0. Deseja continuar?")
+                        .setMessage("Foi identificado que há campo(s) vazio(s), Preencher com 0?")
                         .setPositiveButton("Sim", (dialog, which) -> {
                             if(ValorA.isEmpty()){
                                 binding.valorA.setText("0");
