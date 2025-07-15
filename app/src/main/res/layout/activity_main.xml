@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="50dp"
+        android:gravity="center|center_vertical|center_horizontal"
+        android:text="EQUAÇÃO DO 2º GRAU"
+        android:textSize="25dp"
+        android:textAlignment="center"
+        android:textStyle="bold" />
+
+    <!-- Tabela para fazer o layout -->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp">
+
+        <!-- Linha do Título-->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Valor de A"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Valor de B"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Valor de C"
+                android:textStyle="bold"/>
+        </TableRow>
+        <!-- Fim da Linha do Título-->
+
+        <!-- Linha das entradas dos valores -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <EditText
+                android:id="@+id/valorA"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:hint="A"
+                android:inputType="numberSigned|numberDecimal"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/valorB"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="50dp"
+                android:layout_marginLeft="50dp"
+                android:hint="B"
+                android:inputType="numberSigned|numberDecimal"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <EditText
+                android:id="@+id/valorC"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+
+                android:hint="C"
+                android:inputType="numberSigned|numberDecimal"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </TableRow>
+        <!-- fim da Linha das entradas dos valores -->
+    </TableLayout>
+    <!-- Fim da Tabela para fazer o layout -->
+
+    <!-- Botão Calcular -->
+    <Button
+        android:id="@+id/btnCalcular"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:text="CALCULAR"
+        android:layout_marginTop="50dp"/>
+    <!-- Fim do Botão Calcular -->
+</LinearLayout>
