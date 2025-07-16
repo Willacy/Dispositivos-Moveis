@@ -5,10 +5,10 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical"
+    android:background="#465C3C"
     android:gravity="center_horizontal"
-    android:background="#465C3C">
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/textView2"
@@ -17,8 +17,9 @@
         android:layout_marginTop="20dp"
         android:gravity="center|center_vertical|center_horizontal"
         android:text="EQUAÇÃO DO 2º GRAU"
-        android:textSize="25dp"
         android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="25dp"
         android:textStyle="bold" />
 
     <!-- Tabela para fazer o layout -->
@@ -31,26 +32,32 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_marginBottom="10dp">
+            android:layout_marginBottom="10dp"
+            android:gravity="center">
+
             <TextView
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Valor de A"
-                android:textStyle="bold"/>
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
             <TextView
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Valor de B"
-                android:textStyle="bold"/>
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
             <TextView
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Valor de C"
-                android:textStyle="bold"/>
+                android:textColor="@color/white"
+                android:textStyle="bold" />
         </TableRow>
         <!-- Fim da Linha do Título-->
 
@@ -67,6 +74,7 @@
                 android:hint="A"
                 android:inputType="numberSigned|numberDecimal"
                 android:textAlignment="center"
+                android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -74,21 +82,23 @@
                 android:id="@+id/valorB"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="50dp"
                 android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
                 android:hint="B"
                 android:inputType="numberSigned|numberDecimal"
                 android:textAlignment="center"
+                android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold" />
+
             <EditText
                 android:id="@+id/valorC"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
-
                 android:hint="C"
                 android:inputType="numberSigned|numberDecimal"
                 android:textAlignment="center"
+                android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold" />
         </TableRow>
@@ -101,10 +111,10 @@
         android:id="@+id/btnCalcular"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:text="CALCULAR"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:backgroundTint="#2D332A"
-        android:textColor="@color/white"/>
+        android:text="CALCULAR"
+        android:textColor="@color/white" />
     <!-- Fim do Botão Calcular -->
 
     <!-- Layout Resultado -->
@@ -112,33 +122,37 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:orientation="vertical"
-        android:gravity="center">
+        android:gravity="center"
+        android:orientation="vertical">
         <!-- Resultado -->
         <TextView
             android:id="@+id/auxiliarResultado"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
             android:hint=""
-            android:textSize="20sp"
             android:textAlignment="center"
-            android:layout_marginBottom="10dp"/>
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
         <TextView
             android:id="@+id/x1"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
             android:hint="X1"
-            android:textSize="40sp"
             android:textAlignment="center"
-            android:layout_marginBottom="10dp"/>
+            android:textColor="@color/white"
+            android:textSize="40sp" />
 
         <TextView
             android:id="@+id/x2"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:hint="X2"
-            android:textSize="40sp"
-            android:textAlignment="center"/>
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="40sp" />
         <!-- Fim do Resultado -->
 
         <!-- Botão Limpar -->
@@ -146,10 +160,10 @@
             android:id="@+id/btnLimpar"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
-            android:text="LIMPAR"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="20dp"
             android:backgroundTint="#2D332A"
-            android:textColor="@color/white"/>
+            android:text="LIMPAR"
+            android:textColor="@color/white" />
         <!-- Fim do Botão Calcular -->
     </LinearLayout>
     <!-- Fim do Layout Resultado -->
