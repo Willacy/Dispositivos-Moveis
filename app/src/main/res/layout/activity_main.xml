@@ -155,15 +155,30 @@
             android:textSize="40sp" />
         <!-- Fim do Resultado -->
 
-        <!-- Botão Limpar -->
-        <Button
-            android:id="@+id/btnLimpar"
-            android:layout_width="320dp"
+        <!-- Botões -->
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:backgroundTint="#2D332A"
-            android:text="LIMPAR"
-            android:textColor="@color/white" />
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btnSalvar"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#2D332A"
+                android:text="SALVAR"
+                android:textColor="@color/white"
+                android:layout_marginRight="10dp"/>
+            <Button
+                android:id="@+id/btnLimpar"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#2D332A"
+                android:text="LIMPAR"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
         <!-- Fim do Botão Calcular -->
     </LinearLayout>
     <!-- Fim do Layout Resultado -->
