@@ -20,6 +20,33 @@ import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final int REQUEST_CODE_STORAGE_PERMISSION = 1;
+    private void solicitarPermissaoSeNecessario() {
+        if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.READ_MEDIA_IMAGES)
+                != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(
+                    this,
+                    new String[]{android.Manifest.permission.READ_MEDIA_IMAGES},
+                    REQUEST_CODE_STORAGE_PERMISSION
+            );
+        } else {
+            Toast.makeText(this, "Permissão já concedida!", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+        if (requestCode == REQUEST_CODE_STORAGE_PERMISSION) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                Toast.makeText(this, "Permissão concedida!", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, "Permissão negada.", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -110,6 +137,12 @@ public class MainActivity extends AppCompatActivity {
             binding.x2.setText("");
             binding.valorA.requestFocus();
         });
+
+        // Botão Salvar
+        binding.btnSalvar.setOnClickListener(view -> {
+            solicitarPermissaoSeNecessario();
+        });
+
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());

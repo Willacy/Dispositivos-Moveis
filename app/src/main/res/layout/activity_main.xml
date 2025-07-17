@@ -162,13 +162,22 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/btnLimpar"
-                android:layout_width="320dp"
+                android:id="@+id/btnSalvar"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_margin="5dp"
+                android:backgroundTint="#2D332A"
+                android:text="SALVAR"
+                android:textColor="@color/white" />
+            <Button
+                android:id="@+id/btnLimpar"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
                 android:backgroundTint="#2D332A"
                 android:text="LIMPAR"
                 android:textColor="@color/white" />
+
         </LinearLayout>
 
         <!-- Fim do Botão Calcular -->
